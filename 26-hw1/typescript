@@ -1,0 +1,139 @@
+Script started on Sat 22 Sep 2018 02:37:41 PM EDT
+mst611@ice4:~/26-hw1$ gcc -Wall -Wextra rmtags.c -o rmtags
+mst611@ice4:~/26-hw1$ ./rmtags < sched | head -2
+002;i;m-f;05:20;middleborough/ lakeville;middleborough
+002;i;m-f;05:30;bridgewater;middleborough
+mst611@ice4:~/26-hw1$ ./rmtags >[K< sched | ./semi2tab2 | He[K[Khead -2
+002	i	m-f	05:20	middleborough/ lakeville	middleborough
+002	i	m-f	05:30	bridgewater	middleborough
+mst611@ice4:~/26-hw1$ ./semi2tab2 < sched | ./rmtags | head 02[K[K-2
+002	i	m-f	05:20	middleborough/ lakeville	middleborough
+002	i	m-f	05:30	bridgewater	middleborough
+mst611@ice4:~/26-hw1$ gcc -Wall -Wet[Kxtra hello6.x [K[Kc -o hello6
+mst611@ice4:~/26-hw1$ ./hello6
+Print what string? hello
+Repeat it how many times? abc
+This is not a number: abc
+Repeat it how many times? abc123
+This is not a number: abc123
+Repeat it how many times? 123abc
+This is not a number: 123abc
+Repeat it how many times? -123
+This is not a number: -123
+Repeat it how many times? -123abc
+This is not a number: -123abc
+Repeat it how many times? 4
+0. hello
+1. hello
+2. hello
+3. hello
+mst611@ice4:~/26-hw1$ gcc -Wall -Wxtra[K[K[K[Kextra extract_comments.c -o extract_comments
+mst611@ice4:~/26-hw1$ ./extract_comments < extract_comments.c
+/*
+ *  extract_comments.c
+ *
+ * purpose: extracts comments from a C program and writes them out
+ *   input: .c file
+ *  output: all the comments from the input file
+ *   usage: extract_comments < myprog.c
+ *    note: problem description mentions example of a comment within
+ *          a string a la printf("This / *is not a comment here* /\n);.
+ *          My implementation finds that as a comment since it looks for
+ *          opening and closing / * * /. <--ignore spaces between '/' and '*'.
+ */
+//keep track of current and previous char
+/* Iterate through by character until you reach end of file */
+//store char as it might be start of comment
+//get next char to evaluate it
+//switch to old_style mode
+//switch to new_style mode
+/*
+ * new_style mode
+ * 
+ * In this mode, comments begin with '//' and end with a newline, '\n'.
+ * Iterate through chars until we reach the '\n', print the newline char,
+ * and kick back to the main loop.
+ */
+//put the last two chars, aka, the beginning of the comment
+//c exits the while loop with '\n'. we output and return
+/*
+ * old_style mode
+ *
+ * In this mode, comments begin with '/ *' and end with '* /' (no spaces).
+ * Iterate through chars (unless we reach EOF) and look for a '*' char
+ * followed by a '/' char. If we find them adjacent to each other, break
+ * the loop and return to main.
+ */
+//put the last two chars, aka, the beginning of the comment
+//if a '*', could be last char before end of comment
+//get next char to evaluate it
+//if a '/', that means the end of the comment
+//add a newline
+//and exit back to main
+//if not a '/', putchar and continue to the next
+mst611@ice4:~/26-hw1$ gcc -Wall -We[Kextra hello_large.c -o hello_large
+mst611@ice4:~/26-hw1$ ./hello_large 
+Number? abcd
+This is not a positive number. Please try again!
+Number? abcd1234
+This is not a positive number. Please try again!
+Number? !@#
+This is not a positive number. Please try again!
+Number? -1234
+This is not a positive number. Please try again!
+Number? 1
+1
+mst611@ice4:~/26-hw1$ ./hello_large 
+Number? 12
+12
+mst611@ice4:~/26-hw1$ ./hello_large 
+Number? 123
+123
+mst611@ice4:~/26-hw1$ ./hello_large 
+Number? 1234
+1,234
+mst611@ice4:~/26-hw1$ ./hello_large 
+Number? 09832     823987298374
+823,987,298,374
+mst611@ice4:~/26-hw1$ gcc -Wall -Wxtra[K[K[K[Kextra badtime.c splitline.c -o badtime
+mst611@ice4:~/26-hw1$ ./badtime < sched
+TR=129;dir=o;day=m-f;TI=25:01;stn=manchester;Line=newburyport
+TR=129;dir=o;day=m-f;TI=25:07;stn=west gloucester;Line=newburyport
+TR=129;dir=o;day=m-f;TI=25:14;stn=gloucester;Line=newburyport
+TR=129;dir=o;day=m-f;TI=25:22;stn=rockport;Line=newburyport
+TR=183;dir=o;day=m-f;TI=25:05;stn=ipswich;Line=newburyport
+TR=183;dir=o;day=m-f;TI=25:10;stn=rowley;Line=newburyport
+TR=183;dir=o;day=m-f;TI=25:18;stn=newburyport;Line=newburyport
+TR=229;dir=o;day=m-f;TI=25:00;stn=andover;Line=haverhill
+TR=229;dir=o;day=m-f;TI=25:07;stn=lawrence;Line=haverhill
+TR=229;dir=o;day=m-f;TI=25:16;stn=bradford;Line=haverhill
+TR=229;dir=o;day=m-f;TI=25:18;stn=haverhill;Line=haverhill
+TR=2709;dir=o;day=su;TI=13:2;stn=south station;Line=franklin
+TR=314;dir=i;day=m-f;TI=99:13;stn=winchester center;Line=lowell
+TR=329;dir=o;day=m-f;TI=:24;stn=north billerica;Line=lowell
+TR=401;dir=o;day=m-f;TI=O7:31;stn=north leominster;Line=fitchburg
+TR=412;dir=i;day=m-f;TI=10:3O;stn=hastings;Line=fitchburg
+TR=433;dir=o;day=m-f;TI=25:05;stn=littleton / rte 495;Line=fitchburg
+TR=433;dir=o;day=m-f;TI=25:13;stn=ayer;Line=fitchburg
+TR=433;dir=o;day=m-f;TI=25:18;stn=shirley;Line=fitchburg
+TR=433;dir=o;day=m-f;TI=25:27;stn=north leominster;Line=fitchburg
+TR=433;dir=o;day=m-f;TI=25:34;stn=fitchburg;Line=fitchburg
+TR=538;dir=i;day=m-f;TI=25:01;stn=framingham;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:06;stn=west natick;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:11;stn=natick center;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:15;stn=wellesley square;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:19;stn=wellesley hills;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:22;stn=wellesley farms;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:27;stn=auburndale;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:30;stn=west newton;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:33;stn=newtonville;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:41;stn=yawkey;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:46;stn=back bay;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:51;stn=south station;Line=worcester
+TR=539;dir=o;day=m-f;TI=25:00;stn=worcester;Line=worcester
+TR=839;dir=o;day=m-f;TI=25:00;stn=south attleboro;Line=providence
+TR=839;dir=o;day=m-f;TI=25:10;stn=providence;Line=providence
+mst611@ice4:~/26-hw1$ exit
+exit
+
+Script done on Sat 22 Sep 2018 02:40:45 PM EDT

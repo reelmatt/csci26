@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>First Train</title>
+</head>
+<body>
+  <h1>First Train</h1>
+  <p><form action="first_train.cgi" method="get">
+      <p><label>Which station? (lowercase)</p>
+      <p><input type="text" pattern="[/a-z ]+"  size="25" name="station"/></label></p>
+      <p>Direction:</p>
+      <label>Inbound <input type="radio" name="direction" value="i"/></label>
+      <label>Outbound<input type="radio" name="direction" value="o"/></label>
+      <p><input type="submit" value="Find train"></p>
+  </form></p>
+</body>
+</html>

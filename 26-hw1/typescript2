@@ -1,0 +1,58 @@
+Script started on Sat 22 Sep 2018 06:27:07 PM EDT
+mst611@ice4:~/26-hw1$ gcc -Wall -Wextra extract_comments.c 0[K-o extract_comments.c[K[K
+mst611@ice4:~/26-hw1$ ./extract_comments -[K< extract_comments.c
+/*
+ *  extract_comments.c
+ *
+ * purpose: extracts comments from a C program and writes them out
+ *   input: .c file
+ *  output: all the comments from the input file
+ *   usage: extract_comments < myprog.c
+ */
+//keep track of current and previous char
+/* Iterate through by character until you reach end of file */
+//store char as it might be start of comment
+//get next char to evaluate it
+//switch to old_style mode
+//switch to new_style mode
+//switch to string_mode
+/*
+ * string_mode
+ *
+ * In this mode, start by checking whether quote char is used for a
+ * comparison (e.g. c == '"'). If it is, return immediately.
+ *
+ * Otherwise, the quote is the beginning of a string, so ignore all
+ * comment chars, '/' and '*'. Just read in chars until you find the
+ * closing '"' quote. Then return to main().
+ */
+//Check if quote is not the start of a string
+//Selection is a string, so read chars until the closing quote
+/*
+ * new_style mode
+ * 
+ * In this mode, comments begin with '//' and end with a newline, '\n'.
+ * Iterate through chars until we reach the '\n', print the newline char,
+ * and kick back to the main loop.
+ */
+//put the last two chars, aka, the beginning of the comment
+//c exits the while loop with '\n'. we output and return
+/*
+ * old_style mode
+ *
+ * In this mode, comments begin with '/ *' and end with '* /' (no spaces).
+ * Iterate through chars (unless we reach EOF) and look for a '*' char
+ * followed by a '/' char. If we find them adjacent to each other, break
+ * the loop and return to main.
+ */
+//put the last two chars, aka, the beginning of the comment
+//if a '*', could be last char before end of comment
+//get next char to evaluate it
+//if a '/', that means the end of the comment
+//add a newline
+//and exit back to main
+//if not a '/', putchar and continue to the next
+mst611@ice4:~/26-hw1$ exit
+exit
+
+Script done on Sat 22 Sep 2018 06:27:35 PM EDT
