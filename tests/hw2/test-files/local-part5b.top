@@ -1,0 +1,34 @@
+	  <noprocess>
+<html>
+<head>
+	<link rel='stylesheet' type='text/css' href='whostyle.css'/>
+</head>
+<body bgcolor=white>
+<table class='redbox'>
+  	  </noprocess>
+<attributes>
+     class='name'
+class='tty'
+
+		class='number'
+
+</attributes>
+tulgatnoga pts/0        Oct  1 09:13 (pfp11.abccorp.com)
+molay    pts/1        Oct  1 13:53 (c-76-34-119-236.hsd1.ma.comcast.net)
+molay    pts/9        Oct  1 13:54 (c-76-34-119-236.hsd1.ma.comcast.net)
+<noprocess>
+<h2>Train times</h2>
+<p>Info about <b>trains</b> are listed here</p>
+</noprocess>
+<delim value=; />
+<attributes>
+     class='train'
+class='direction'
+
+		class='time'
+
+</attributes>
+TR=002;dir=i;day=m-f;TI=05:20;stn=middleborough/ lakeville;Line=middleborough
+TR=002;dir=i;day=m-f;TI=05:30;stn=bridgewater;Line=middleborough
+TR=002;dir=i;day=m-f;TI=05:37;stn=campello;Line=middleborough
+TR=002;dir=i;day=m-f;TI=05:41;stn=brockton;Line=middleborough

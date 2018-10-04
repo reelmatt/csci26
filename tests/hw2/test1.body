@@ -1,0 +1,59 @@
+<noprocess>
+ <html><head>
+        <link rel='stylesheet' type='text/css' href='whostyle.css'/>
+       </head>
+ <body bgcolor=white>
+<attributes>
+  class='name' and class='other'
+  class='tty'
+
+  class='number'
+
+</attributes> 
+ <table class='redbox'>
+</noprocess>
+<attributes>
+  class='name here'
+  class='tty'
+  <noprocess>
+<delim value=, />
+  class='number'
+
+</attributes>
+lakeplacid pts/20       Oct  1 17:42 (pool-221-38-216-127.bstnma.fios.verizon.net)      	
+jerrymander pts/24       Oct  1 11:05 (203.36.20.134)
+</noprocess>
+finndog    pts/26       Oct  1 18:41 (pool-171-54-32-27.bstnma.east.verizon.net)
+sklee pts/29       Oct  1 18:50 (pool-72-74-93-74.bstnma.fios.verizon.net)  		 
+<noprocess>
+</table>
+<h2>Area 2</h2>
+<delim value=| />
+</noprocess>
+<delim value=; />
+<attributes>
+  class='attr1'
+  class='attr2'
+
+  class='attr4'
+
+</attributes>
+TR=004;   dir=i;day=m-f;TI=06:30;stn=holbrook/ randolph;Line=middleborough
+TR=004;dir=i;day=m-f;TI=06:42;stn=quincy center;Line=middleborough
+<attributes>
+class='test1'
+
+class='test3'
+</attributes>
+TR=004;dir=i;day=m-f;TI=06:58;stn=south station;Line=middleborough
+		TR=005   ;dir=o;day=m-f;TI=08:24;stn=south station;Line=middleborough     
+	TR=005;dir=o;day=m-f;TI=08:43;stn=braintree;Line=middleborough			
+<delim value=; />
+TR=081;dir=o;day=m-f;TI=16:51;stn=north scituate;Line=greenbush
+TR=081;dir=o;day=m-f;TI=16:59;stn=greenbush;Line=greenbush
+TR=082;dir=i;day=m-f;TI=11:50;stn=greenbush;Line=greenbush
+TR=082;dir=i;day=m-f;TI=11:57;stn=north scituate;Line=greenbush
+TR=082;dir=i;day=m-f;TI=12:04;stn=cohasset;Line=greenbush
+TR=005;dir=o;day=m-f;TI=08:51;stn=holbrook/ randolph;Line=middleborough
+<delim value=/ />
+TR=005;dir=o;day=m-f;TI=08:56;stn=montello;Line=middleborough

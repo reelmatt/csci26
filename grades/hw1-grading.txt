@@ -1,0 +1,71 @@
+CSCI E26                                   shorts grading summary
+____________________________________________________________________
++------------------------------------------------------------------+
+Name: Matthew Thomas                                Grader: brandon|
++------------------------------------+-------+---------------------+
+Function                        max  |score  notes                 |
++------------------------------------+-------+---------------------+
+web page                         15  |  15   |                     |
+| exists                          4  |   4   |                     |
+| complete                        4  |   4   |                     |
+| hit counter                     3  |   3   |                     |
+| multi-user explanation          4  |   4   |                     |
++------------------------------------+-------+---------------------+
+Problem 1                        12  |  10   |                     |
+| removes first tag               2  |   2   |                     |
+| removes other tags              2  |   2   -2: didn't provide    |
+| leaves delims                   2  |   2   an answer for part    |
+| no extra chars                  2  |   2   b.                    |
+| answer to (b)                   2  |   0   |                     |
+| (c)                             2  |   2   |                     |
++------------------------------------+-------+---------------------+
+Problem 2                        10  |   8   -2: while to for is   |
+| for->while                      5  |   5   not a direct trans-   |
+| while->for                      5  |   3   lation. should check  |
+|                                    |       newline in for con-   |
+|                                    |       dition.               |
++------------------------------------+-------+---------------------+
+Problem 3. Extract Comments      16  |  14   would be better with  |
+| finds opening //                3  |   3   an FSM, but good use  |
+| finds opening /*                3  |   3   of modularity to      |
+| finds closing */                2  |   1   keep the program      |
+| finds closing newline           2  |   1   from getting over-    |
+| adds newlines for */            1  |   1   complicated.   -2:    |
+| uses fsm                        1  |   1   missing EOF check     |
+| copies comments, not code       2  |   2   could cause infinite  |
+| clarity/design                  2  |   2   loop or bad output.   |
++------------------------------------+-------+---------------------+
+4. insert commas                 16  |  14   |                     |
+| prints prompt                   2  |   2   |                     |
+| gets string                     2  |   2   |                     |
+| checks all digits               2  |   2   -2: expects a new-    |
+| handles newline ok              2  |   0   line in the input     |
+| mostly works                    4  |   4   string.               |
+| handles all cases               2  |   2   |                     |
+test for 1003                        |       |                     |
+| style/design                    2  |   2   |                     |
++------------------------------------+-------+---------------------+
+5. Misc CGI                      12  |  12   |                     |
+| html page                       4  |   4   |                     |
+| cgi script                      4  |   4   |                     |
+| shell script                    4  |   4   |                     |
++------------------------------------+-------+---------------------+
+6. TI data errors                11  |   8   -2: incomplete data   |
+| finds wrong format              2  |   1   validation could      |
+| finds non-numeric               2  |   2   lead to processing    |
+| finds out of range              2  |   2   bad data or array     |
+| prevents buffer overflows       2  |   0   overrun.   -1: miss-  |
+| design,readbility,comments      3  |   3   ing ';' check to      |
+|                                    |       make sure field       |
+|                                    |       stops after valid     |
+|                                    |       time.                 |
++------------------------------------+-------+---------------------+
+Paperwork                         8  |   8   |                     |
+| script                          4  |   4   |                     |
+| readme                          4  |   4   |                     |
++------------------------------------+-------+---------------------+
+Total                           100  |  89   |                     |
++------------------------------------+-------+---------------------+
+Summary:   Good work overall on all program functionality. Needs   |
+some data validation and special case handling improvements.       |
++------------------------------------------------------------------+
