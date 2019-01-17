@@ -1,0 +1,22 @@
+/* 
+ * A list of errors I found in the MBTA Commuter Rail schedule
+ *
+ * Matthew Thomas -- matthew_thomas@hms.harvard.edu
+ */
+- A train number of “worcesterTR=1314”
+- There’s a “dir=I” and a “dir=I”
+- Four options for days: m-f, sa (Saturday), su (Sunday), and “s”
+- There’s a few time errors:
+    - Most are “TI=“, but there’s a “T=17:09” row
+    - A row with “TI=08:511”
+    - A row with “TI=17” (instead of, presumably, 17:00)
+    - “TI=19:2”
+    - “TI=:24”
+    - “TI=99:13”
+    - I’m guessing times with 24:00 and above (up to 25:51) implies 1:15am the following morning, but on the “day” schedule
+- Several errors in the station column:
+    - A listing with just “48”
+    - A line entry of “Line=greenbush”
+    - A duplicate entry of “sttn=brandeis/ roberts”
+- Two stations are included in the “line” column: “stn=fairmount” and “stn=jfk/umass”
+- There is one entry with a 7th column, with “Line=fairmount”

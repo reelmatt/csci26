@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# most-stops: find the line on the commuter rail with the most stops 
+#       does: a pipeline to find line with the most stops
+#
+# Matthew Thomas -- matthew_thomas@hms.harvard.edu
+
+cut -d";" -f6 sched | sort | uniq -c | sort -n | tail -n1
