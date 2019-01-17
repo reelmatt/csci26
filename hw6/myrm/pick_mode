@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# 	pick_mode:
+#	usage: ./pick_mode
+#
+#  Method: goes through all files located in "trashroom" directory
+#          Asks users whether they want to trash or recover each file
+#          and performs the requested action.
+#
+
+for f in "$@"
+do
+	# get just the filename itself
+	FILE=$(basename "$f")
+
+	# ask for confirmation
+	printf "file \"$FILE\". throw out or recover? (t/r) "
+	read ANS
+
+	# trash or recover
+	case $ANS in
+		t)	echo "trashing..."
+			rm $HOME/trashroom/"$FILE"			;;
+		r)	echo "recovering..."
+			./move_file "$HOME/trashroom" "." "$FILE"	;;
+		*)	continue					;;
+	esac
+done
+
+exit 0

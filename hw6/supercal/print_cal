@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# 	print_cal
+#	usage: print_cal year month[s]
+#
+
+LIST="$(./get_range 1 12)"		# add 1-12 for all of $Y
+
+if [ $# = 1 ]
+then
+	/usr/bin/cal $1
+else
+	YEAR=$1
+	shift
+
+	# loop through other arg[s] (month[s]) and call cal for each
+	while test $# -gt 0
+	do
+		/usr/bin/cal $1 $YEAR
+		shift
+	done
+fi
+
+exit 0

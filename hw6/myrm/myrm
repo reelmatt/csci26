@@ -1,0 +1,55 @@
+#!/bin/sh
+#
+# 	myrm: adds a temporary trashbin to delete files to; allows for recovery
+#
+#	usage: myrm [-gLlpt] file ...
+#
+
+# set variable for trash folder, and default mode
+TRASH=$HOME/trashroom
+MODE=trash
+WD=$(pwd)
+
+#
+# num_items
+#	--easily return the number of items passed through
+#
+num_items()
+{
+    ls -1 $TRASH | wc -l
+}
+
+# if a trash folder does not exist, make one to use
+if [ ! -d $TRASH ]
+then
+    mkdir $TRASH
+fi
+
+# iterate through all the command line arguments
+while test $# -gt 0
+do
+    case $1 in
+        -g)	MODE=recover					;;
+        -l)	ls $TRASH					;;
+        -L)	ls -l $TRASH					;;
+        -p)	./pick_mode $TRASH/*				;;
+        -t)	IN_TRASH=$(num_items)
+
+		if [ $IN_TRASH -eq 0 ]
+		then
+			echo "Your trashroom is clean, no files to remove!"
+		else
+			./clean_mode $IN_TRASH
+		fi
+								;;
+        *)	if [ $MODE = "recover" ]
+		then
+			./move_file "$TRASH" "." "$1"
+		else
+			./move_file "." "$TRASH" "$1"
+		fi
+								;;
+    esac
+
+    shift
+done

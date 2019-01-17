@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+# check_guess:
+#
+#  usage: check_guess $LETTER $LIST
+# Errors: exit 1, not enough args
+#         exit 2, letter has already been guessed
+#
+
+
+# do we have at least one arg (guess)
+# if it's the first guess, LIST might be blank
+if [ $# = 0 ]
+then
+	echo "usage: $0 guess list"
+	exit 1
+fi
+
+# extract the user's current guess
+LETTER=$1
+shift
+
+# go through list of guesses to compare
+while [ $# -gt 0 ]
+do
+	if [ "$LETTER" = "$1" ]
+	then
+		exit 2 # already guessed
+	else
+		shift
+	fi
+done
+
+exit 0

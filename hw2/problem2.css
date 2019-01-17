@@ -1,0 +1,13 @@
+.user {
+	text-decoration: underline;
+	font-weight: bold;
+	border-style: dashed;
+	padding: 1em;
+}
+
+.time {
+	font-weight: lighter;
+	text-transform: capitalize;
+	padding 1em;
+	border: 2px solid grey;
+}

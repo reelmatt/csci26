@@ -1,0 +1,11 @@
+%!cal%
+
+Please use the calendar above as a helpful reference.
+
+Also, %firstname%, your favorites are as follows:
+	Day of the week: %day%
+	Number: %num%
+	Movie: %movie%
+
+
+

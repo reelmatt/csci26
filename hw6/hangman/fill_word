@@ -1,0 +1,46 @@
+#!/bin/sh
+#
+# fill_word:
+#
+#  usage: fill_word guess filled expanded
+# Method: The FILLED and EXPANDED words are of the same length (filled starts)
+#         out with all dashes. Check the user's guess (LETTER) with the current
+#         letter in the expanded "actual" word. If it matches, replace in the
+#         FILLED word. If not, add the char already in FILLED (either letter or
+#         dash).
+# Errors: exit 1, incorrect number of args
+#         exit 2, the guess matches no letters in expanded word
+#
+
+# check correct number of args
+if [ $# -lt 3 ]
+then
+	echo "$0: usage: fill_word guess filled expanded"
+	exit 1
+fi
+
+# load up guess and currently filled word variables
+LETTER=$1
+FILLED=$(./explode $2)
+shift 2
+
+# initialize word and val to return
+RETWORD=""
+RETVAL=2
+
+# iterate through in-progress word (e.g. "-a-a--o-", for "vacation")
+for i in $FILLED
+do
+	if [ "$LETTER" = "$1" ]             # if letter matches full word
+	then
+		RETVAL=0                    # exit with 0
+		RETWORD="$RETWORD$LETTER"   # add the letter to the RETWORD
+	else
+		RETWORD="$RETWORD$i"        # otherwise, add FILLED letter
+	fi
+
+	shift
+done
+
+echo $RETWORD
+exit $RETVAL

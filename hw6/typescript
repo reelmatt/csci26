@@ -1,0 +1,435 @@
+Script started on Sat 01 Dec 2018 06:45:03 PM EST
+[1;95m~/hw6[0m[0;36m (master)[0;31m [0m $ cd supercal/
+[1;95m~/hw6/supercal[0m[0;36m (master)[0;31m [0m $ cd supercal/[7Plearrm typescript [8Pcd ../[2Prm t./hangman cd hangman/more typescript ls[Kscript[2Pexit./myrm test1 test2 test3 -L -p -t -l[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd hw6/myrm/rm -r trashroom/ls[Kcd ../ls -la[Kcd $HOME/trashroom ./myrm test1 test2 test3 "name with spaces" "other witth space" -l -g test1 test2 -L -p -t[Atouch test1 test2 test3 "name with spaces" "other with space"[K[A[1;95m~/hw6/supercal[0m[0;36m (master)[0;31m [0m $ ls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ../myrm/[1P./hangman cd ../hangman/./supercal jan - 5 1977 3 7 november 2000 1922 feb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd supercal/[K./supercal jan - 5 1977 3 7 november 2000 1922 feb
+    January 1977      
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30 31                 
+   February 1977      
+Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5  
+ 6  7  8  9 10 11 12  
+13 14 15 16 17 18 19  
+20 21 22 23 24 25 26  
+27 28                 
+                      
+     March 1977       
+Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5  
+ 6  7  8  9 10 11 12  
+13 14 15 16 17 18 19  
+20 21 22 23 24 25 26  
+27 28 29 30 31        
+                      
+     April 1977       
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+                      
+      May 1977        
+Su Mo Tu We Th Fr Sa  
+ 1  2  3  4  5  6  7  
+ 8  9 10 11 12 13 14  
+15 16 17 18 19 20 21  
+22 23 24 25 26 27 28  
+29 30 31              
+                      
+     March 2000       
+Su Mo Tu We Th Fr Sa  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28 29 30 31     
+                      
+     July 2000        
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30 31                 
+   November 2000      
+Su Mo Tu We Th Fr Sa  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28 29 30        
+                      
+                            1922
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+ 1  2  3  4  5  6  7            1  2  3  4            1  2  3  4  
+ 8  9 10 11 12 13 14   5  6  7  8  9 10 11   5  6  7  8  9 10 11  
+15 16 17 18 19 20 21  12 13 14 15 16 17 18  12 13 14 15 16 17 18  
+22 23 24 25 26 27 28  19 20 21 22 23 24 25  19 20 21 22 23 24 25  
+29 30 31              26 27 28              26 27 28 29 30 31     
+                                                                  
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1      1  2  3  4  5  6               1  2  3  
+ 2  3  4  5  6  7  8   7  8  9 10 11 12 13   4  5  6  7  8  9 10  
+ 9 10 11 12 13 14 15  14 15 16 17 18 19 20  11 12 13 14 15 16 17  
+16 17 18 19 20 21 22  21 22 23 24 25 26 27  18 19 20 21 22 23 24  
+23 24 25 26 27 28 29  28 29 30 31           25 26 27 28 29 30     
+30                                                                
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5                  1  2  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   3  4  5  6  7  8  9  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  10 11 12 13 14 15 16  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  17 18 19 20 21 22 23  
+23 24 25 26 27 28 29  27 28 29 30 31        24 25 26 27 28 29 30  
+30 31                                                             
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+ 1  2  3  4  5  6  7            1  2  3  4                  1  2  
+ 8  9 10 11 12 13 14   5  6  7  8  9 10 11   3  4  5  6  7  8  9  
+15 16 17 18 19 20 21  12 13 14 15 16 17 18  10 11 12 13 14 15 16  
+22 23 24 25 26 27 28  19 20 21 22 23 24 25  17 18 19 20 21 22 23  
+29 30 31              26 27 28 29 30        24 25 26 27 28 29 30  
+                                            31                    
+   February 2018      
+Su Mo Tu We Th Fr Sa  
+             1  2  3  
+ 4  5  6  7  8  9 10  
+11 12 13 14 15 16 17  
+18 19 20 21 22 23 24  
+25 26 27 28           
+                      
+[1;95m~/hw6/supercal[0m[0;36m (master)[0;31m [0m $ cd ../hangman/
+[1;95m~/hw6/hangman[0m[0;36m (master)[0;31m [0m $ ./hangman 
+./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|
+	|
+	|
+	|
+	|
+	========
+Guesses: 
+   Word: -----------
+  Guess? a./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|
+	|
+	|
+	|
+	========
+Guesses: a
+   Word: -----------
+  Guess? e./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|    |
+	|
+	|
+	|
+	========
+Guesses: ae
+   Word: -----------
+  Guess? i./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|    |
+	|
+	|
+	|
+	========
+Guesses: aei
+   Word: --------i--
+  Guess? o./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|    |
+	|
+	|
+	|
+	========
+Guesses: aeio
+   Word: --o-o---i--
+  Guess? u./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|
+	|
+	|
+	|
+	========
+Guesses: aeiou
+   Word: --o-o---i--
+  Guess? r./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|
+	|
+	|
+	|
+	========
+Guesses: aeiour
+   Word: -ro-o---i--
+  Guess? s./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|
+	|
+	|
+	========
+Guesses: aeiours
+   Word: -ro-o---i--
+  Guess? t./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|
+	|
+	|
+	========
+Guesses: aeiourst
+   Word: -rotot--i--
+  Guess? l./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|    |
+	|
+	|
+	========
+Guesses: aeiourstl
+   Word: -rotot--i--
+  Guess? n./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|    |
+	|
+	|
+	========
+Guesses: aeiourstln
+   Word: -rotot--in-
+  Guess? g./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|    |
+	|
+	|
+	========
+Guesses: aeiourstlng
+   Word: -rotot--ing
+  Guess? p./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|    |
+	|
+	|
+	========
+Guesses: aeiourstlngp
+   Word: protot-ping
+  Guess? y./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|    |
+	|
+	|
+	========
+Guesses: aeiourstlngpy
+   Word: prototyping
+
+You got it! Try another word? (y/n) aInvalid answer, please answer y or n: eInvalid answer, please answer y or n: pInvalid answer, please answer y or n: iInvalid answer, please answer y or n: y./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|
+	|
+	|
+	|
+	|
+	========
+Guesses: 
+   Word: ------
+  Guess? a./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|
+	|
+	|
+	|
+	========
+Guesses: a
+   Word: ------
+  Guess? e./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|
+	|
+	|
+	|
+	========
+Guesses: ae
+   Word: e-----
+  Guess? i./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|
+	|
+	|
+	|
+	========
+Guesses: aei
+   Word: e-i---
+  Guess? o./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|    |
+	|
+	|
+	|
+	========
+Guesses: aeio
+   Word: e-i---
+  Guess? u./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|
+	|
+	|
+	|
+	========
+Guesses: aeiou
+   Word: e-i---
+  Guess? r./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|
+	|
+	|
+	========
+Guesses: aeiour
+   Word: e-i---
+  Guess? s./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|    |
+	|
+	|
+	========
+Guesses: aeiours
+   Word: e-i---
+  Guess? t./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|    |
+	|   /
+	|
+	========
+Guesses: aeiourst
+   Word: e-i---
+  Guess? l./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|    |
+	|   /
+	|
+	========
+Guesses: aeiourstl
+   Word: e-ill-
+  Guess? n./print_ui: 15: [: missing ]
+[H[2J	+----+
+	|    |
+	|    O
+	|   /|\
+	|    |
+	|   / \
+	|
+	========
+Guesses: aeiourstln
+   Word: e-ill-
+
+Sorry, the word was "evilly"
+Another word (y/n)? n
+You guessed 1 out of 2 words correct.
+[1;95m~/hw6/hangman[0m[0;36m (master)[0;31m [0m $ cd ../myrm/
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ ls
+clean_mode  filename with spaces  move_file  myrm  pick_mode
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ touch test1 test2 test3 "other with spaces"
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ ./myrm test1 test2 test3 "filename with spaces" "t[Kother witth spaces" -l -g tets1[K[K[Kst [K1 test2 -L -p -t -l
+filename with spaces  other with spaces  test1	test2  test3
+total 0
+-rw-r--r-- 1 mst611 extstu 0 Nov 29 12:50 filename with spaces
+-rw-r--r-- 1 mst611 extstu 0 Dec  1 18:46 other with spaces
+-rw-r--r-- 1 mst611 extstu 0 Dec  1 18:46 test3
+file "filename with spaces". throw out or recover? (t/r) t
+trashing...
+file "other with spaces". throw out or recover? (t/r) r
+recovering...
+file "test3". throw out or recover? (t/r) a
+Ok to delete these 1 items:
+test3
+Confirm (y/n): y
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ ./myrm -l
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ ls
+clean_mode  move_file  myrm  other with spaces	pick_mode  test1  test2
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ ./myrm test1 test2
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ touch test1 test2
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ ./myrm test1 test2
+there is already a file called test1 in /home/m/s/mst611/trashroom
+ok to replace it? (y/n) 
+y
+there is already a file called test2 in /home/m/s/mst611/trashroom
+ok to replace it? (y/n) 
+y
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ touch test1
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ ./myrm -g test1
+there is already a file called test1 in .
+ok to replace it? (y/n) 
+y
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ ./myrm -l
+test2
+[1;95m~/hw6/myrm[0m[0;36m (master)[0;31m [0m $ exit
+exit
+
+Script done on Sat 01 Dec 2018 06:47:51 PM EST

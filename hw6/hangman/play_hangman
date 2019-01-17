@@ -1,0 +1,81 @@
+#!/bin/sh
+#
+# 	./play_hangman:
+#
+#	Method: generates a word and has user guess word,
+#           reducing the number of tries left if an
+#           incorrect guess. Plays a single game, called
+#           by ./hangman to play multiple.
+#   Return: exit 0, correctly guessed word
+#           exit 1, did not correctly guess word
+#
+
+LIST=""
+TRIES=0
+MAX=7
+WORD=$(./random_word)
+EXPANDED=$(./explode "$WORD")
+FILLED=$(./make_dashed $EXPANDED)
+GUESS=""
+MESSAGE=""
+
+while test $TRIES -le $MAX
+do
+   ./print_ui $TRIES $LIST $FILLED
+
+    # if there's an extra message, print and then reset
+    if [ ! "$MESSAGE" = "" ]
+    then
+        printf "$MESSAGE"
+        MESSAGE=""
+    fi
+    printf "  Guess? "
+    GUESS=$(./get_input)
+
+    # if guess is not [a-z], not valid
+    if [ $? -ne 0 ]
+    then
+    	MESSAGE="not a valid guess: $GUESS\n"
+    	continue
+    fi
+
+    # check guess against list of guesses
+    ./check_guess "$GUESS" $(./explode $LIST)
+
+    #if it's been guessed, try again
+    if [ $? -ne 0 ]
+    then
+        MESSAGE="You've already guessed '$GUESS'\n"
+    	continue
+    fi
+
+    # add to list of guesses and fill in incomplete word
+    LIST="$LIST$GUESS"
+    FILLED=$(./fill_word $GUESS $FILLED $EXPANDED)
+
+    # if a letter was filled, check to see if word is completely filled
+    if [ $? = 0 ]
+    then
+        if [ $FILLED = $WORD ]
+        then
+            ./print_ui $TRIES $LIST $FILLED
+
+            printf "\nYou got it! Try another word? (y/n) "
+            exit 0
+        fi
+        else
+            TRIES=$(expr $TRIES + 1)
+
+            if [ $TRIES -ge $MAX ]
+            then
+                ./print_ui $TRIES $LIST $FILLED
+
+                printf "\nSorry, the word was \"$WORD\"\n"
+                printf "Another word (y/n)? "
+                exit 1
+            fi
+        fi
+done
+
+exit 0
+

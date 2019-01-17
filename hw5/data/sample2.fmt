@@ -1,0 +1,12 @@
+Date: %!date%
+Current machine: %!hostname%
+
+Our records indicate that you have the following devices:
+Computer: %computer%
+Tablet: %tablet%
+Phone: %phone%
+Game console: %game%
+
+That's all, thank you!
+----------------------
+

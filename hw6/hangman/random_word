@@ -1,0 +1,52 @@
+#!/bin/sh
+#
+# select a random word from /usr/dict/words
+# by taking line #N from the file where
+# N = ( $$ * seconds ) mod (words in /usr/dict/words)
+# skip over all words that are not all lowercase
+#
+#
+# A calling script could write
+#
+#	WORD=`./random_word`
+#
+
+get_index()
+{
+    od -N 4 /dev/random | \
+    awk 'NF == 3 { printf "((%d*%d) %% '$1') + 1\n", $2, $3; }' | bc
+}
+
+	# this file is a list of words
+	LIST1=/usr/dict/words
+	LIST2=/usr/share/dict/words
+	LIST=""
+	for f in $LIST1 $LIST2
+	do
+		if test -f $f ; then
+			LIST=$f
+			break
+		fi
+	done
+	if test "$LIST" = "" ; then
+		echo turnip
+		exit
+	fi
+	
+	# get the number of words in the file
+	WORDS=`wc -l < $LIST`
+
+	# compute starting point
+	X=`get_index $WORDS`
+
+	# set current word to NONE
+	WORD="NONE"
+	#
+	# loop until an all-lowercase word
+	while test "`echo "$WORD" | tr -d -c '[a-z]'`" != "$WORD"
+	do
+		WORD=`sed -n -e "$X"p -e "$X"q $LIST`
+		X=`get_index $WORDS`
+	done
+	echo $WORD
+		

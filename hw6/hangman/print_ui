@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# print_ui: prints the UI pieces needed for hangman
+#
+# usage ./print_ui TRIES LIST FILLED
+#
+# Method: pass in three parameters to print. TRIES corresponds
+#         to which hm.# image should be shown. LIST is the list
+#         of guesses the user has made (if any). FILLED is the
+#         word the user is guessing (some combination of dashes
+#         and letters).
+#
+
+
+if [ $# -lt 2 -o $# -gt 3]
+then
+	echo "$0: usage: print_ui TRIES [LIST] FILLED"
+	exit 1
+fi
+
+clear
+cat hm.$1			; shift
+
+# If theres fewer than 2 args, no guesses have been made yet
+# Output an empty "Guesses: " line and move on
+if [ $# -lt 2 ]
+then
+	echo "Guesses: "
+else
+	echo "Guesses: $1"
+	shift
+fi
+
+echo "   Word: $1"
+exit 0

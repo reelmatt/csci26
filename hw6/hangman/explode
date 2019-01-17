@@ -1,0 +1,20 @@
+# explode
+#   purpose: convert word to list
+#               "abcde" -> "a b c d e "
+#       arg: a single word
+#    output: an 'exploded' version
+#
+#    sample:   X=$(explode "hello")
+#              for l in $X
+#              do
+#                 echo next letter is $l
+#              done
+#
+#    sample2:  REVERSE=""
+#              for l in $(explode "hello")
+#              do
+#                 REVERSE="$l$REVERSE"
+#              done
+#              echo $REVERSE
+
+echo $1 | sed 's/./& /g'

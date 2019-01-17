@@ -1,0 +1,54 @@
+#!/bin/sh
+#
+# 	hangman: plays games of hangman
+#
+#	 Method: loop calls on "play_hangman" and prompts the user,
+#	         both on failure and success, if they want to play again.
+#
+
+# keep track of num of correct words, and total words
+CORRECT=0
+NUM_WORDS=1
+stty onlret
+
+# keep invoking "play_hangman", right or wrong, until user stops
+while true
+do
+    ./play_hangman
+
+    # if successful exit, word was guessed - add 1
+    if [ $? = 0 ]
+    then
+        CORRECT=$(expr $CORRECT + 1)
+    fi
+
+    # prompt user to play again, stop if 'n'
+    CONTINUE=""
+    ANS=$(./get_input)
+
+    while [ "$CONTINUE" = "" ]
+    do
+        stty -onlret
+
+        case $ANS in
+            n) CONTINUE="n" ;;
+            y) CONTINUE="y" ;;
+            *) printf "\rInvalid answer, please answer y or n: "
+               ANS=$(./get_input)
+               ;;
+        esac
+
+        stty onlret
+    done
+
+    # guarenteed "y" or "n" input at this point, exit in other cases
+    case $CONTINUE in
+    	y) NUM_WORDS=$(expr $NUM_WORDS + 1)   # add to total word tally
+           continue ;;
+    	n) break    ;;
+        *) exit 1   ;;
+    esac
+done
+
+printf "\nYou guessed $CORRECT out of $NUM_WORDS words correct.\n"
+exit 0

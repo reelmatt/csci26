@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# 	make_dashed:
+#	usage: make_dashed exploded-word
+#
+#	Method: takes an exploded word (each letter a separate arg)
+#           and adds a corresponding dash '-' to a variable that
+#           is echoed.
+#   Errors: exit 1 if blank word (no dashes added)
+#
+
+if [ $# = 0 ]
+then
+	exit 1
+fi
+
+WORD=""
+while [ $# -gt 0 ]
+do
+	WORD="$WORD-"
+	shift
+done
+
+echo $WORD
+exit 0

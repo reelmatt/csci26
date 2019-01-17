@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# 	clean_mode:
+#	usage: ./clean_mode numfiles
+#
+#  Method: Lists all files currently in the trashroom that user
+#          is looking to delete. Asks confirmation and removes
+#          only if 'y'.
+#
+
+
+printf "Ok to delete these $1 items:\n"
+ls -1 $HOME/trashroom
+printf "Confirm (y/n): "
+
+read ANS
+
+case $ANS in
+	y) rm $HOME/trashroom/*		;;
+	*) echo "Files not removed."	;;
+esac
+
+exit 0

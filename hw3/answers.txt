@@ -1,0 +1,220 @@
+##################################
+#       CSCI e-26 -- hw3         #
+#         Matthew Thomas         #
+# matthew_thomas@hms.harvard.edu #
+#           answers.txt          #
+##################################
+
+1. A pointer variable is a piece of storage that can store
+an address (or the number) of a location in memory.
+
+2. See prob2.c for added code. See prob2.png for diagram.
+Output of program used for diagram as follows:
+value of t = hi
+value of x = 43
+value of y[0] = 73	y[1] = 181	 y[2] = 30	y[3] = 131
+value of a = pointers store addresses.
+value of *q = 73
+value of *p = 116
+value of *s = 43
+value of *rr = 73
+location of t = 0x10b7c2018
+location of x = 0x7ffee443eab4
+location of y = 0x7ffee443eaa0
+location of a = 0x7ffee443ea80
+location of q = 0x7ffee443ea78
+location of s = 0x7ffee443ea68
+location of p = 0x7ffee443ea70
+location of r = 0x7ffee443ea60
+
+3a. 
+m is 140732906052224, &m is 140732906052224, &m[0] is 140732906052224, m[0] is 4
+p is 140732906052232, &p is 140732906052216, &p[0] is 140732906052232, p[0] is 2
+
+3b. See prob3.png for diagram.
+
+3c. The first three values in the first printf are the same because they all
+reference/point to the start of the integer array "m". &m is the same as saying
+"where is m?" which is also the same as &m[0] (where is the _start_ of m?). The
+first value in the printf is also the same because without specifying an element
+of an array, just asking for the name of the array itself, "m", it returns the
+address where it is located.
+
+3d. In the second printf, the values of p and &p[0] are the same, because they
+both reference the same point in memory. p points to m[2] so it prints the
+address of m[2]. &p[0] is saying "where is the start of p" which is the same as
+saying "where does p point?". However, &p is different because that is saying
+"where is the pointer variable p located?". As you can see on the diagram, 
+pointer variables are allocated separate memory and hold addresses. That's why
+ the location of p is different from where p points.
+
+3e. The value of p[-1] is 3 and the value of p[-2] is 4. After p is assigned 
+"m + 2", p points to the third element (second index) in the array m -- m[2]. 
+Asking for the -1 and -2 elements dereferences "p" and reads the corresponding
+elements in the array "m". Since p points to m[2], p[-1] corresponds to m[2-1]
+or m[1] and p[-2] corresponds to m[2-2] or m[0], the values of which are 3 and
+4 respectively.
+
+4a. The lines starting with printf("p1[0][0] is... and printf("p2[0][0] is...
+are the lines with compiler errors. They are compiler errors because when
+adding [0][0] to p1 and p2, it expects to dereference twice. But p1 and p2
+both point to char arrays, not arrays of char arrays. So you can do p1[0] or
+p2[0] to get a single char, but trying to access another index after that
+causes a compiler error because the value is "not an array, pointer, or
+vector" as the compiler says. 
+
+4b. 
+n is 140732798089840, n[0] is 140732798089840, n[0][0] is 97
+(n+1) is 140732798089850, (n+1)[0] is 140732798089850, (n+1)[0][0] is 98
+p1 is 140732798089860, p1[0] is 99
+p2 is 140732798089860, p2[0] is 99
+
+4c. See prob4.png for diagram.
+
+4d. p1 and p2 have the same value because the expression they point to, n[2]
+and n + 2 respectively, evaluate to the same location. n[2] is the third row
+in the 2d array, or "carol". n + 2 is the same because it says "go to n and
+jump ahead 2 elements". In this case, each element is a char array of length
+10. Therefore, it goes to the third row n[2] or "carol".
+
+4e. To continue off part 4d, I think the value of p2+1 will be "...89861"
+(last five digits of the address), or one more than the address at p2. In
+other words, if you were to dereference p2 and p2+1 you would get the chars
+'c' and 'a' respectively from the row containing "carol". Adding this line to
+the program, I get the output confirming my guess of:
+
+p2+1 is 140732798089861
+
+Where as in part 4d, n + 2 jumps ahead 10 bytes in memory, because each row
+in n is 10 bytes long, p2+1 only jumps ahead 1 byte. p2 is pointing to a given
+location, in this case the location of n[2], and p2+1 jumps ahead one byte to
+the location equivalent to n[2][1].
+
+5a. a[2] == 4
+
+5b. *(a + 2) == 4
+
+5c. a[4]-a[2] == 2
+
+5d. a[a[4]-2] == 6
+
+5e. (a+10)[-8] == 4
+
+6a. *a == a[0]
+
+6b. *(a+3) == a[3]
+
+6c. (a + *a)[*a + a[2]] == a[12]
+
+6d. (a+4)[-2] == a[2]
+
+6e. *(a-10) == a[-10]
+
+7a. x == 6
+    a == { 6, 5, 4, 3, 1, 0 }
+    p -> a[0]
+
+7b. x == 3
+    a == { 6, 5, 4, 3, 1, 0 }
+    p -> a[0]
+
+7c. x == 4
+    a == { 6, 5, 4, 4, 1, 0 }
+    p -> a[0]
+
+7d. x == 5
+    a == { 6, 5, 4, 3, 1, 0 }
+    p -> a[1]
+
+7e. x == 7
+    a == { 7, 5, 4, 3, 1, 0 }
+    p -> a[0]
+
+7f. x == 6
+    a == { 6, 5, 4, 3, 1, 0 }
+    p -> a[1]
+
+7g. x == 6
+    a == { 7, 5, 4, 3, 1, 0 }
+    p -> a[0]
+
+7h. x == 1
+    a == { 6, 5, 4, 3, 1, 0}
+    p -> a[0]
+
+8. There is an error in the first line of the functino that declares
+int *squares[n];. The return type of set_squares is a single integer pointer,
+presumably to the first element of an int array. Delcaring "squares" as an array
+of integer pointers will produce a compiler warning about incompatible pointer
+types.
+
+Another error is that the array created in set_squares (either the pointer
+array as originally written, or changing it to 'int squares[n]' to fix the
+error above) is function-scope. It is declared and initialized in set_squares,
+so once the function returns, the memory allocated for the array will no
+longer be guarenteed and therefore produce undefined behavior. A potential fix
+would be to pass in a pointer to the array where you want the squares stored.
+
+The last two lines,
+    *squares[i] = i*i;
+and
+    return squares;
+are continuations of the error mentioned in the first paragraph. As written,
+an array of integer pointers will not work because it expects a single int
+pointer as a return type. While the problem of a function-scope array exists,
+a partial fix could be to declare an array "int squares[n]", store the squares
+as part of the for loop, and "return &squares[0]" as a pointer to the first
+int. But there would still be undefined behavior when returning to main or
+whatever function called set_squares.
+
+9a.
+The string "Hello" has the value 4483305262
+The variable p has the value 4483305262
+The value of "Hello"+1 is 4483305263
+The variable p now has the value 4483305263
+The length of p+1 is 3
+
+9b. See prob9.png for diagram.
+
+9c. The first printf statement allocates a block of memory to store "Hello".
+In this case, the block starts at 4483305262. The pointer p is then assigned
+the same address. The compiler doesn't allocate a block to store a second,
+duplicate "Hello"; the programmer would have to request that by declaring
+separate variables. This is why the second printf line, which shows "p" is
+the same. The next two printf lines also show the same address for a similar
+reason. "Hello" occupies its space in memory and "Hello" + 1 says to look
+for where "Hello" begins and advance one byte in memory. Assigning this to
+the pointer p has the same reuslt. The final printf line which displays
+strlen(p+1) is 3, because p is advanced another char (i.e. it now reads
+"llo\0". It starts at "H" at the line
+        p = "Hello";
+Then sees "ello\0" at the line
+        p = "Hello" + 1;
+Finally, when computing strlen(), p continues to point at "ello\0", but p + 1
+is passed through to strlen, so a length of 3 is read for "llo\0".
+
+10a. The output of putchar("abcde"[3]) is "d".
+
+10b. This expression is legal because "abcde" is a char array and [3] tells
+the program to look at the fourth element (third index) in that array. That
+element, 'd', happens to be a char, so putchar() is satisfied and prints 'd'
+to stdout. For putchar(), this means that any expression which evalutes to a
+char can be passed in and printed out.
+
+11. See strrev.c for code.
+
+12. See prob12.png for diagram.
+
+13a. The first array, a, is an array of 10 stop structs. Each element in the
+array contains a stop which in turn contains a char pointer "station", and int
+variables "hh" and "mm". You could access the contents of an element, for
+example, by writing
+    a[4].station
+
+The second array, b, is an array of pointers to stop structs, also of length
+10. Each element (row) in b can hold a pointer to a stop struct which in turn
+holds a "station" char pointer, and int variables "hh" and "m". You could
+access the contents of an element, for example, by writing
+    b[2]->mm
+
+13b. See prob13.png for diagram.

@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# 	get_range
+#	usage: get_range start end
+#	error: exit 1, a START or END month was not read
+#
+
+# get the digits for any text-months
+START=$(./name2num $1)
+END=$(./name2num $2)
+
+# if name2num failed for either START or END, exit
+if [ "$START" = "" -o "$END" = "" ]
+then
+	exit 1
+fi
+
+# add the corresponding month numbers to a list
+MONTHS=""
+
+while [ $START -le $END ]
+do
+	MONTHS="$MONTHS $START"
+	START=$(expr $START + 1)
+done
+
+# return the list of months (as digits)
+echo $MONTHS
+exit 0

@@ -1,0 +1,60 @@
+Script started on Sat 13 Oct 2018 07:48:23 PM EDT
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ gcc -Wall -Wextra prob2.c o-[K[K-o prob2
+prob2.c: In function ‘main’:
+prob2.c:21:4: warning: assignment from incompatible pointer type [enabled by default]
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ ./prob2
+value of t = hi
+value of x = 43
+value of y[0] = 73	y[1] = 181	 y[2] = 30	y[3] = 131
+value of a = pointers store addresses.
+value of *q = 73
+value of *p = 116
+value of *s = 43
+value of *rr = 73
+location of t = 0x601028
+location of x = 0x7ffed120dc3c
+location of y = 0x7ffed120dc00
+location of a = 0x7ffed120dc40
+location of q = 0x7ffed120dc18
+location of s = 0x7ffed120dc28
+location of p = 0x7ffed120dc20
+location of r = 0x7ffed120dc30
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ ./prob2gcc -Wall -Wextra prob2.c -o prob2[K3[1P[1@3
+prob3.c: In function ‘main’:
+prob3.c:16:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int *’ [-Wformat]
+prob3.c:16:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘int’ [-Wformat]
+prob3.c:18:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘int *’ [-Wformat]
+prob3.c:18:5: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘int’ [-Wformat]
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ ./prob3
+m is 140720849904896, &m is 140720849904896, &m[0] is 140720849904896, m[0] is 4
+p is 140720849904904, &p is 140720849904920, &p[0] is 140720849904904, p[0] is 2
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ ./prob3gcc -Wall -Wextra prob3.c -o prob3[K4[1P[1@4
+prob4.c: In function ‘main’:
+prob4.c:13:8: warning: assignment from incompatible pointer type [enabled by default]
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ ./prob4
+n is 140737111385424, n[0] is 140737111385424, n[0][0] is 97
+(n+1) is 140737111385434, (n+1)[0] is 140737111385434, (n+1)[0][0] is 98
+p1 is 140737111385444, p1[0] is 99
+p2 is 140737111385444, p2[0] is 99
+p2+1 is 140737111385445
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ ./prob4gcc -Wall -Wextra prob4.c -o prob4[K9[1P[1@9
+prob9.c: In function ‘main’:
+prob9.c:21:5: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat]
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ ./prob4[K9
+The string "Hello" has the value 4196016
+The variable p has the value 4196016
+The value of "Hello"+1 is 4196017
+The variable p now has the value 4196017
+The length of p+1 is 3
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ ./prob9[Kgcc -Wall -Wextra prob9.c -o prob9[K[K[K[K[Kstrrev[C[1P[1P[1P[1P[1P[1@s[1@t[1@r[1@r[1@e[1@v
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ ./strrev 
+example1 =	Hello
+reverse (arrays) =	olleH
+reverse (pointers) =	olleH
+example2 =	hi there you
+reverse (arrays) =	uoy ereht ih
+reverse (pointers) =	uoy ereht ih
+[1;95m~/hw3[0m[0;36m (master)[0;31m ![0m $ ext[Kit
+exit
+
+Script done on Sat 13 Oct 2018 07:49:21 PM EDT

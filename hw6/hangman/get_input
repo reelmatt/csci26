@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# 	./get_input
+#
+#   Method: Immediately reads user's input on command-line.
+#           Changes input to lowercase and checks to see if
+#           it is a letter. If yes, echo and exit 0; otherwise
+#           exit 1 for error.
+#     Note: read_one_char() and lcase() functions copied from the class
+#           examples and assignment.
+#
+
+lcase()
+{
+	echo $1 | tr "[A-Z]" "[a-z]"
+}
+
+read_one_char()
+{
+	stty -icanon min 1
+ 	dd ibs=1 count=1 status=noxfer 2>/dev/null
+	stty icanon
+}
+
+# read user input
+INPUT=$(read_one_char)
+
+# translate to lowercase, and check if it is a letter
+if echo $(lcase $INPUT) | grep -q '[a-z]'
+then
+	echo $(lcase $INPUT)
+	exit 0
+else
+	echo "$INPUT"
+	exit 1
+fi

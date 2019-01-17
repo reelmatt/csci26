@@ -1,0 +1,46 @@
+#!/bin/sh
+#
+# 	move_file:
+#	usage: ./move_file src-dir dst-dir file
+#
+#  Method: Checks to see whether moving a file from the source
+#          to destination directories would overwrite an existing
+#          file. If it does, it asks confirmation. If yes, or would
+#          not overwrite a file, it moves it from the source to destination
+#          directory.
+#  Errors: exit 1, incorrect usage
+#          exit 2, user chose 'n' - don't move file
+#
+
+
+# make sure we have the right number of args
+if [ $# -ne 3 ]
+then
+	echo "$0: usage move_file src-dir dst-dir file"
+	exit 1
+fi
+
+# assign directory variables
+SRC=$1
+DST=$2
+shift 2
+
+# default answer
+MOVE="y"
+
+# check if there's already a file in the destination
+if [ -f "$DST/$@" ]
+then
+	echo "there is already a file called $1 in $DST"
+	echo "ok to replace it? (y/n) "
+
+	read MOVE
+fi
+
+# recover the file (or exit)
+case $MOVE in
+	n) exit 2				;;
+	*) mv "$SRC"/"$@" "$DST"		;;
+esac
+
+exit 0

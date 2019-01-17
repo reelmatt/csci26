@@ -1,0 +1,754 @@
+Script started on Thu 04 Oct 2018 10:42:43 AM EDT
+[1;95m~/public_html/hw2[0m[0;36m (master)[0;31m [0m $ ./tt1.cgi 
+Content-Type: text/plain
+
+Here are the current internet connections:
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 ice4.fas.harvard.:41828 splunkindex8-60ox:50514 ESTABLISHED
+tcp        0      0 ice4.fas.harvard.ed:ssh hbs29-112.hbs.edu:54788 ESTABLISHED
+tcp        0      0 ice4.fas.harvard.ed:ssh c-73-231-88-92.hs:62850 ESTABLISHED
+tcp        0    152 ice4.fas.harvard.ed:ssh cet-it-pat.med.ha:58155 ESTABLISHED
+tcp        0      0 ice4-33.fas.harvard:952 scmr-vnx02-33.unix.:nfs ESTABLISHED
+tcp        0      0 ice4.fas.harvard.:41833 splunkindex8-60ox:50514 TIME_WAIT  
+tcp        0      0 ice4.fas.harvard.ed:ssh hbs29-112.hbs.edu:57383 ESTABLISHED
+tcp        0      0 ice4.fas.harvard.:51812 splunkindex10-60o:50514 TIME_WAIT  
+tcp        0      0 ice4.fas.harvard.ed:ssh ug-lin.lids.mit.e:45988 ESTABLISHED
+tcp        0      0 ice4.fas.harvard.:51821 splunkindex10-60o:50514 TIME_WAIT  
+tcp        0      0 ice4.fas.harvard.:49675 splunkindex7-10wa:50514 ESTABLISHED
+tcp        0      0 ice4.fas.harvard.:38330 huit-itsec-bro-10:50514 ESTABLISHED
+tcp        0      0 ice4.fas.harvard.:50100 ldap.fas.harvard.e:ldap ESTABLISHED
+tcp        0      0 ice4.fas.harvard.:59943 splunkindex7-10wa:50514 TIME_WAIT  
+Here are the current files:
+total 176
+-rwxr-xr-x 1 mst611 extstu   584 Oct  4 09:50 part3b.cgi
+-rwxr-xr-x 1 mst611 extstu   208 Oct  4 09:50 part4b.cgi
+-rw-r--r-- 1 mst611 extstu   244 Oct  4 09:51 part4b.top
+-rwxr-xr-x 1 mst611 extstu   211 Oct  4 10:19 part5b.cgi
+-rw-r--r-- 1 mst611 extstu   198 Sep 29 10:45 problem2.css
+-rw-r--r-- 1 mst611 extstu  3970 Oct  4 09:48 README.txt
+-rw-r--r-- 1 mst611 extstu   907 Sep 29 10:45 style1.css
+-rw-r--r-- 1 mst611 extstu   576 Sep 29 10:45 table1.html
+-rw-r--r-- 1 mst611 extstu  3895 Oct  4 09:46 table_tools.c
+-rwxr-xr-x 1 mst611 extstu   270 Oct  4 09:55 tt1.cgi
+-rwxr-xr-x 1 mst611 extstu 12941 Oct  4 10:40 tt2ht1
+-rw-r--r-- 1 mst611 extstu  2474 Oct  4 10:38 tt2ht1.c
+-rwxr-xr-x 1 mst611 extstu 13104 Oct  4 10:40 tt2ht2
+-rw-r--r-- 1 mst611 extstu  6940 Oct  4 10:08 tt2ht2.c
+-rwxr-xr-x 1 mst611 extstu 13191 Oct  4 10:41 tt2ht3
+-rw-r--r-- 1 mst611 extstu  9450 Oct  4 10:15 tt2ht3.c
+-rw-r--r-- 1 mst611 extstu     0 Oct  4 10:42 typescript
+-rw-r--r-- 1 mst611 extstu   605 Oct  1 14:25 who.html
+-rw-r--r-- 1 mst611 extstu   643 Sep 29 10:45 whostyle.css
+Here is fstab:
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+proc            /proc           proc    nodev,noexec,nosuid 0       0
+/dev/mapper/vg_root-lv_root /               ext3    errors=remount-ro 0       1
+# /boot was on /dev/sda1 during installation
+UUID=8084aa40-1275-4b22-94bf-8e6e8c2392d6 /boot           ext3    defaults        0       2
+/dev/mapper/vg_root-lv_tmp /tmp            ext3    defaults        0       2
+/dev/mapper/vg_root-lv_usr /usr            ext3    defaults        0       2
+/dev/mapper/vg_root-lv_var /var            ext3    defaults        0       2
+/dev/mapper/vg_root-lv_swap none            swap    sw              0       0
+/dev/fd0        /media/floppy0  auto    rw,user,noauto,exec,utf8 0       0
+[1;95m~/public_html/hw2[0m[0;36m (master)[0;31m [0m $ ./tt1.cgi [5Pls -lrm typescript [2@nano[C[C[C[C[C[C[C[C[C[C[C[Cmore[C[C[C[C[C[C[C[C[C[C[C[C[10Pscript[2Pexit./part5b.cgi gcc -Wall -Wextra -fno-stack-protector table_tools.c tt2ht3.c -o tt2ht3[K1[C[1P[1@1
+[1;95m~/public_html/hw2[0m[0;36m (master)[0;31m [0m $ ./part3b.cgi 
+Content-type: text/html
+
+<html><body style=’background-color: white;’>
+<p>Here are routes to other computers:
+<table border=1 cellpadding=2>
+	<tr>
+		<td>Kernel</td>
+		<td>IP</td>
+		<td>routing</td>
+		<td>table</td>
+	</tr>
+	<tr>
+		<td>Destination</td>
+		<td>Gateway</td>
+		<td>Genmask</td>
+		<td>Flags</td>
+		<td>Metric</td>
+		<td>Ref</td>
+		<td>Use</td>
+		<td>Iface</td>
+	</tr>
+	<tr>
+		<td>default</td>
+		<td>core-aux-1-gw-v</td>
+		<td>0.0.0.0</td>
+		<td>UG</td>
+		<td>100</td>
+		<td>0</td>
+		<td>0</td>
+		<td>eth0</td>
+	</tr>
+	<tr>
+		<td>140.247.33.0</td>
+		<td>*</td>
+		<td>255.255.255.0</td>
+		<td>U</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>eth1</td>
+	</tr>
+	<tr>
+		<td>140.247.34.112</td>
+		<td>*</td>
+		<td>255.255.255.240</td>
+		<td>U</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>eth0</td>
+	</tr>
+</table>
+<p>Here are the current files:</p>
+<table border=1 cellpadding=2>
+	<tr>
+		<td>total</td>
+		<td>176</td>
+	</tr>
+	<tr>
+		<td>-rwxr-xr-x</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>584</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>09:50</td>
+		<td>part3b.cgi</td>
+	</tr>
+	<tr>
+		<td>-rwxr-xr-x</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>208</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>09:50</td>
+		<td>part4b.cgi</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>244</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>09:51</td>
+		<td>part4b.top</td>
+	</tr>
+	<tr>
+		<td>-rwxr-xr-x</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>211</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>10:19</td>
+		<td>part5b.cgi</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>198</td>
+		<td>Sep</td>
+		<td>29</td>
+		<td>10:45</td>
+		<td>problem2.css</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>3970</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>09:48</td>
+		<td>README.txt</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>907</td>
+		<td>Sep</td>
+		<td>29</td>
+		<td>10:45</td>
+		<td>style1.css</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>576</td>
+		<td>Sep</td>
+		<td>29</td>
+		<td>10:45</td>
+		<td>table1.html</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>3895</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>09:46</td>
+		<td>table_tools.c</td>
+	</tr>
+	<tr>
+		<td>-rwxr-xr-x</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>270</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>09:55</td>
+		<td>tt1.cgi</td>
+	</tr>
+	<tr>
+		<td>-rwxr-xr-x</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>12941</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>10:43</td>
+		<td>tt2ht1</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>2474</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>10:38</td>
+		<td>tt2ht1.c</td>
+	</tr>
+	<tr>
+		<td>-rwxr-xr-x</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>13104</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>10:40</td>
+		<td>tt2ht2</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>6940</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>10:08</td>
+		<td>tt2ht2.c</td>
+	</tr>
+	<tr>
+		<td>-rwxr-xr-x</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>13191</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>10:41</td>
+		<td>tt2ht3</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>9450</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>10:15</td>
+		<td>tt2ht3.c</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>0</td>
+		<td>Oct</td>
+		<td>4</td>
+		<td>10:42</td>
+		<td>typescript</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>605</td>
+		<td>Oct</td>
+		<td>1</td>
+		<td>14:25</td>
+		<td>who.html</td>
+	</tr>
+	<tr>
+		<td>-rw-r--r--</td>
+		<td>1</td>
+		<td>mst611</td>
+		<td>extstu</td>
+		<td>643</td>
+		<td>Sep</td>
+		<td>29</td>
+		<td>10:45</td>
+		<td>whostyle.css</td>
+	</tr>
+</table>
+<p>Here is fstab:</p>
+<table border=1 cellpadding=2>
+	<tr>
+		<td>#</td>
+		<td>/etc/fstab:</td>
+		<td>static</td>
+		<td>file</td>
+		<td>system</td>
+		<td>information.</td>
+	</tr>
+	<tr>
+		<td>#</td>
+	</tr>
+	<tr>
+		<td>#</td>
+		<td>Use</td>
+		<td>'blkid'</td>
+		<td>to</td>
+		<td>print</td>
+		<td>the</td>
+		<td>universally</td>
+		<td>unique</td>
+		<td>identifier</td>
+		<td>for</td>
+		<td>a</td>
+	</tr>
+	<tr>
+		<td>#</td>
+		<td>device;</td>
+		<td>this</td>
+		<td>may</td>
+		<td>be</td>
+		<td>used</td>
+		<td>with</td>
+		<td>UUID=</td>
+		<td>as</td>
+		<td>a</td>
+		<td>more</td>
+		<td>robust</td>
+		<td>way</td>
+		<td>to</td>
+		<td>name</td>
+		<td>devices</td>
+	</tr>
+	<tr>
+		<td>#</td>
+		<td>that</td>
+		<td>works</td>
+		<td>even</td>
+		<td>if</td>
+		<td>disks</td>
+		<td>are</td>
+		<td>added</td>
+		<td>and</td>
+		<td>removed.</td>
+		<td>See</td>
+		<td>fstab(5).</td>
+	</tr>
+	<tr>
+		<td>#</td>
+	</tr>
+	<tr>
+		<td>#</td>
+		<td><file</td>
+		<td>system></td>
+		<td><mount</td>
+		<td>point></td>
+		<td><type></td>
+		<td><options></td>
+		<td><dump></td>
+		<td><pass></td>
+	</tr>
+	<tr>
+		<td>proc</td>
+		<td>/proc</td>
+		<td>proc</td>
+		<td>nodev,noexec,nosuid</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>/dev/mapper/vg_root-lv_root</td>
+		<td>/</td>
+		<td>ext3</td>
+		<td>errors=remount-ro</td>
+		<td>0</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td>#</td>
+		<td>/boot</td>
+		<td>was</td>
+		<td>on</td>
+		<td>/dev/sda1</td>
+		<td>during</td>
+		<td>installation</td>
+	</tr>
+	<tr>
+		<td>UUID=8084aa40-1275-4b22-94bf-8e6e8c2392d6</td>
+		<td>/boot</td>
+		<td>ext3</td>
+		<td>defaults</td>
+		<td>0</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>/dev/mapper/vg_root-lv_tmp</td>
+		<td>/tmp</td>
+		<td>ext3</td>
+		<td>defaults</td>
+		<td>0</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>/dev/mapper/vg_root-lv_usr</td>
+		<td>/usr</td>
+		<td>ext3</td>
+		<td>defaults</td>
+		<td>0</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>/dev/mapper/vg_root-lv_var</td>
+		<td>/var</td>
+		<td>ext3</td>
+		<td>defaults</td>
+		<td>0</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>/dev/mapper/vg_root-lv_swap</td>
+		<td>none</td>
+		<td>swap</td>
+		<td>sw</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>/dev/fd0</td>
+		<td>/media/floppy0</td>
+		<td>auto</td>
+		<td>rw,user,noauto,exec,utf8</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+</table>
+<p>Here is train 1205:</p>
+<table border=1 cellpadding=2>
+	<tr>
+		<td>TI=14:45</td>
+		<td>stn=north</td>
+		<td>station</td>
+	</tr>
+	<tr>
+		<td>TI=14:55</td>
+		<td>stn=malden</td>
+		<td>center</td>
+	</tr>
+	<tr>
+		<td>TI=14:59</td>
+		<td>stn=wyoming</td>
+		<td>hill</td>
+	</tr>
+	<tr>
+		<td>TI=15:01</td>
+		<td>stn=melrose</td>
+		<td>cedar</td>
+		<td>park</td>
+	</tr>
+	<tr>
+		<td>TI=15:04</td>
+		<td>stn=melrose</td>
+		<td>highlands</td>
+	</tr>
+	<tr>
+		<td>TI=15:07</td>
+		<td>stn=greenwood</td>
+	</tr>
+	<tr>
+		<td>TI=15:10</td>
+		<td>stn=wakefield</td>
+	</tr>
+	<tr>
+		<td>TI=15:16</td>
+		<td>stn=reading</td>
+	</tr>
+	<tr>
+		<td>TI=15:22</td>
+		<td>stn=north</td>
+		<td>wilmington</td>
+	</tr>
+	<tr>
+		<td>TI=15:28</td>
+		<td>stn=ballardvale</td>
+	</tr>
+	<tr>
+		<td>TI=15:33</td>
+		<td>stn=andover</td>
+	</tr>
+	<tr>
+		<td>TI=15:40</td>
+		<td>stn=lawrence</td>
+	</tr>
+	<tr>
+		<td>TI=15:49</td>
+		<td>stn=bradford</td>
+	</tr>
+	<tr>
+		<td>TI=15:52</td>
+		<td>stn=haverhill</td>
+	</tr>
+</table>
+</body></html>
+[1;95m~/public_html/hw2[0m[0;36m (master)[0;31m [0m $ ./part3b.cgi gcc -Wall -Wextra -fno-stack-protector table_tools.c tt2ht1.c -o tt2ht1[K2[1P[1@2
+[1;95m~/public_html/hw2[0m[0;36m (master)[0;31m [0m $ ./part4b.cgi 
+Content-type: text/html
+
+ <html><head>
+        <link rel='stylesheet' type='text/css' href='whostyle.css'/>
+       </head>
+ <body bgcolor=white>
+ <table class='redbox'>
+	<tr>
+		<td class='name'>tulgatnoga</td>
+		<td class='tty'>pts/0</td>
+		<td>Oct</td>
+		<td class='number'>1</td>
+		<td>09:13</td>
+		<td>(pfp11.abccorp.com)</td>
+	</tr>
+	<tr>
+		<td class='name'>molay</td>
+		<td class='tty'>pts/1</td>
+		<td>Oct</td>
+		<td class='number'>1</td>
+		<td>13:53</td>
+		<td>(c-76-34-119-236.hsd1.ma.comcast.net)</td>
+	</tr>
+	<tr>
+		<td class='name'>molay</td>
+		<td class='tty'>pts/9</td>
+		<td>Oct</td>
+		<td class='number'>1</td>
+		<td>13:54</td>
+		<td>(c-76-34-119-236.hsd1.ma.comcast.net)</td>
+	</tr>
+	<tr>
+		<td class='name'>tulgatnoga</td>
+		<td class='tty'>pts/11</td>
+		<td>Oct</td>
+		<td class='number'>1</td>
+		<td>09:13</td>
+		<td>(pfp11.abccorp.com)</td>
+	</tr>
+	<tr>
+		<td class='name'>lakeplacid</td>
+		<td class='tty'>pts/20</td>
+		<td>Oct</td>
+		<td class='number'>1</td>
+		<td>17:42</td>
+		<td>(pool-221-38-216-127.bstnma.fios.verizon.net)</td>
+	</tr>
+	<tr>
+		<td class='name'>jerrymander</td>
+		<td class='tty'>pts/24</td>
+		<td>Oct</td>
+		<td class='number'>1</td>
+		<td>11:05</td>
+		<td>(203.36.20.134)</td>
+	</tr>
+	<tr>
+		<td class='name'>finndog</td>
+		<td class='tty'>pts/26</td>
+		<td>Oct</td>
+		<td class='number'>1</td>
+		<td>18:41</td>
+		<td>(pool-171-54-32-27.bstnma.east.verizon.net)</td>
+	</tr>
+	<tr>
+		<td class='name'>sklee</td>
+		<td class='tty'>pts/29</td>
+		<td>Oct</td>
+		<td class='number'>1</td>
+		<td>18:50</td>
+		<td>(pool-72-74-93-74.bstnma.fios.verizon.net)</td>
+	</tr>
+	<tr>
+		<td class='name'>lib113</td>
+		<td class='tty'>pts/30</td>
+		<td>Oct</td>
+		<td class='number'>1</td>
+		<td>19:04</td>
+		<td>(pool-72-93-20-134.bstnma.east.verizon.net)</td>
+	</tr>
+	<tr>
+		<td class='name'>betsychase</td>
+		<td class='tty'>pts/31</td>
+		<td>Oct</td>
+		<td class='number'>1</td>
+		<td>19:18</td>
+		<td>(ice2.fas.harvard.edu)</td>
+	</tr>
+</table></body></html>
+[1;95m~/public_html/hw2[0m[0;36m (master)[0;31m [0m $ ./part4b.cgi gcc -Wall -Wextra -fno-stack-protector table_tools.c tt2ht2.c -o tt2ht2[K3[1P[1@3
+[1;95m~/public_html/hw2[0m[0;36m (master)[0;31m [0m $ ./part5b.cgi 
+Content-type: text/html
+
+<html><body><table>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=14:45</td>
+		<td>stn=north station</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=14:55</td>
+		<td>stn=malden center</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=14:59</td>
+		<td>stn=wyoming hill</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:01</td>
+		<td>stn=melrose cedar park</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:04</td>
+		<td>stn=melrose highlands</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:07</td>
+		<td>stn=greenwood</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:10</td>
+		<td>stn=wakefield</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:16</td>
+		<td>stn=reading</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:22</td>
+		<td>stn=north wilmington</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:28</td>
+		<td>stn=ballardvale</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:33</td>
+		<td>stn=andover</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:40</td>
+		<td>stn=lawrence</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:49</td>
+		<td>stn=bradford</td>
+		<td>Line=haverhill</td>
+	</tr>
+	<tr>
+		<td>TR=1205</td>
+		<td>dir=o</td>
+		<td>day=sa</td>
+		<td>TI=15:52</td>
+		<td>stn=haverhill</td>
+		<td>Line=haverhill</td>
+	</tr>
+</table>
+[1;95m~/public_html/hw2[0m[0;36m (master)[0;31m [0m $ exit
+exit
+
+Script done on Thu 04 Oct 2018 10:43:25 AM EDT
