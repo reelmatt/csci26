@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# get_option
+#	usage: get_option [-pt] filepath
+#	opts: -p, get options for pagename via a filename
+#	      -t, get options for titles, via rows in a file
+#
+
+# check for correct number of args
+if [ $# -gt  2 -o $# -eq 0 ]
+then
+	echo "usage: get_pagename_options [-pt] filepath"
+fi
+
+# default option to getting options for pagenames
+TYPE="page"
+
+# cycle through args
+while [ $# -gt 0 ]
+do
+	case $1 in
+		-p) TYPE="page" ;;
+		-t) TYPE="title" ;;
+		*)  if [ "$TYPE" = "title" ]
+		    then
+			# break into 3 groups, use 2nd in the print portion
+			# 1st is title=, 2nd is chars until a "|",
+			# and 3rd is remaining
+			sed "s+\(^title=\)\([^|]*\)\(.*\)+\t\t<option name=\"title\" value=\"\2\">\2</option>+" $1
+		    else
+			# break into 2 groups, use the 1st as filename
+			# 1st if filename, up to the "." marking the extension,
+			# 2nd is ext.
+			NAME=$(basename $1 | sed 's/\(.[^\.]*\)\(.*\)/\1/')
+			printf "\t\t<option value=\"$NAME\">$NAME</option>\n"
+		    fi
+		    ;;
+	esac
+
+	shift
+done

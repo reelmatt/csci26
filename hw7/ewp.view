@@ -1,0 +1,11 @@
+<dt>
+<hr>
+<b>View a Page</b></dt>
+	<dd>
+	<p>
+	Use this function to see what a page looks like.
+	Enter the name of the page and press the <b>view</b>
+	button.
+	<p>
+	<form action='view_page.cgi' method='get'>
+

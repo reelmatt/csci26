@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<style type='text/css'>
+		td.rj { text-align: right; }
+	</style>
+
+	<title>My Web Page Designer</title>
+</head>
+
+<body bgcolor='white'>
+<center>
+	<hr>
+	<span style='color: blue; font-size: larger;'>
+	My Web Page<br> Page Creator/Editor Tool<br>
+	</span>
+	<hr>
+</center>
+<p>
+Use this page to create and edit customized web pages.  You can add
+items to pages, edit items on pages, and delete items on pages.  
+<hr>
+
+<!-- a def list allows for headers and indented blocks -->
+
+<dl>

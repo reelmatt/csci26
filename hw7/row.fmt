@@ -1,0 +1,4 @@
+<tr>
+  <td bgcolor='%tcolor%'><a href="%url%">%title%</a></td>
+  <td>%desc%</td>
+</tr>

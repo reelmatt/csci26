@@ -1,0 +1,41 @@
+<dt><b>Add/Edit an Item</b></dt>
+	<dd>
+	<p>
+	Use this function to add new items to your web page or
+	edit existing items.  Include
+	the name of the page and all the details about the item.
+	When you are done, press the <b>update</b> button, and the
+	new item will be added to the named web page.  If the
+	page contains an item with the same title, that item
+	will be replaced with the data you provide.
+	<p>
+	<form action='add-edit_item.cgi' method='get'>
+	<table border='0' cellpadding='2' cellspacing='0'>
+	<tr>
+	   <td class='rj'>Page name:</td>
+	   <td><input type='text' name='pagename' size='20' required>*required</td>
+	</tr>
+	<tr>
+	   <td class='rj'>Item title:</td>
+	   <td><input type='text' name='title' size='20' required>*required</td>
+	</tr>
+	<tr>
+	   <td class='rj'>Title color:</td>
+	   <td><input type='text' name='titlecolor' size='20'></td>
+	</tr>
+	<tr>
+	   <td class='rj'>Description:</td>
+	   <td><input type='text' name='descrip' size='40'></td>
+	</tr>
+	<tr>
+	   <td class='rj'>URL:</td>
+	   <td><input type='text' name='url' size='40'></td>
+	</tr>
+	<tr>
+	   <td></td>
+	   <td><input type='submit' value=' update '></td>
+	</tr>
+	</table>
+	</form>
+	</dd>
+

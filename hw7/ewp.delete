@@ -1,0 +1,10 @@
+<dt>
+<hr>
+<b>Delete an Item</b></dt>
+	<dd>
+	<p>
+	Use this function to delete an item from a page.
+	Enter the name of the page and the title of the
+	item.  Then press the <b>Delete</b> button.
+	<p>
+	<form action='delete_item.cgi' method='get'>
